@@ -1,7 +1,15 @@
-import React from "react";
+import { FC } from "react";
 import "./App.css";
+import SearchBar from "./components/SearchBar";
+import { IBook } from "./Interfaces";
 
-function App() {
-  return <div className="App"> </div>;
-}
+import data from "./Data.json";
+
+const App: FC = () => {
+  return (
+    <div className="App">
+      <SearchBar placeholder="Enter a book name" booksData={data} />
+    </div>
+  );
+};
 export default App;
